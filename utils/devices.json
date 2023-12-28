@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Smart Fan",
+    "type": "Kipas Angin",
+    "mqtt_topic": "home/device/smartfan",
+    "command": [
+      {
+        "name": "Speed 1",
+        "message": "#SPEEDONE",
+        "voice": "Hidupkan Kipas Angin Kecepatan 1"
+      },
+      {
+        "name": "Speed 2",
+        "message": "#SPEEDTWO",
+        "voice": "Hidupkan Kipas Angin Kecepatan 2"
+      },
+      {
+        "name": "Swing ON",
+        "message": "#SWINGON",
+        "voice": "Swing Kipas Angin"
+      },
+      {
+        "name": "Swing OFF",
+        "message": "#SWINGOFF",
+        "voice": "Matikan Swing Kipas Angin"
+      },
+      { "name": "OFF", "message": "#OFF", "voice": "Matikan Kipas Angin" }
+    ],
+    "status": "status/smartfan"
+  },
+  {
+    "id": 2,
+    "name": "Smart Lamp",
+    "type": "Lampu Kamar",
+    "mqtt_topic": "home/device/smartlamp",
+    "command": [
+      {
+        "name": "Hidup",
+        "message": "#ON",
+        "voice": "Hidupkan Lampu Kamar"
+      },
+      {
+        "name": "Mati",
+        "message": "#OFF",
+        "voice": "Matikan Lampu Kamar"
+      }
+    ],
+    "status": "status/smartlamp"
+  }
+]
