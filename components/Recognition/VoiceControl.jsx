@@ -73,7 +73,7 @@ const VoiceControl = () => {
           `Perintah ${commandName} telah dikirim untuk ${selectedDevice.name}.`
         );
         alert(
-          `Successfully give commands to the ${selectedDevice.name} device. `
+          `Sukses Mengirimkan Perintah ke Perangkat ${selectedDevice.name}.`
         );
       } else {
         console.log("Perangkat tidak ditemukan berdasarkan perintah suara.");

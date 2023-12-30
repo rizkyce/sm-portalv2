@@ -4,6 +4,7 @@ import deviceTemplates from "@/utils/deviceTemplate.json";
 export default function Form() {
   const [name, setName] = useState("");
   const [deviceTemplate, setDeviceTemplate] = useState("");
+  const [voiceCommand, setVoiceCommand] = useState("");
   const [devId, setDevId] = useState("");
 
   const handleNameChange = (event) => {
@@ -14,6 +15,10 @@ export default function Form() {
     setDeviceTemplate(event.target.value);
   };
 
+  const handleVoiceCommandChange = (event) => {
+    setVoiceCommand(event.target.value);
+  };
+
   const handleDevIdChange = (event) => {
     setDevId(event.target.value);
   };
@@ -22,9 +27,11 @@ export default function Form() {
     event.preventDefault();
     console.log("Name:", name);
     console.log("Device Template:", deviceTemplate);
+    console.log("Voice Command:", voiceCommand);
     console.log("Device ID:", devId);
     setName("");
     setDeviceTemplate("");
+    setVoiceCommand("");
     setDevId("");
   };
 
@@ -63,6 +70,18 @@ export default function Form() {
               </option>
             ))}
           </select>
+        </div>
+        <div className="flex flex-col mt-4">
+          <label htmlFor="devId" className="text-gray-600 mb-2">
+            Voice Command
+          </label>
+          <input
+            type="text"
+            id="voiceCommand"
+            className="border-2 border-gray-300 p-2 rounded-xl"
+            value={voiceCommand}
+            onChange={handleVoiceCommandChange}
+          />
         </div>
         <div className="flex flex-col mt-4">
           <label htmlFor="devId" className="text-gray-600 mb-2">

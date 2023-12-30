@@ -10,7 +10,7 @@ export default function Page() {
   const [activePage, setActivePage] = useState("devices");
 
   return (
-    <div className="flex pt-16">
+    <div className="flex pt-10">
       <Sidebar setActivePage={setActivePage} />
       {activePage === "devices" && <Devices />}
       {activePage === "addDevice" && <Form />}

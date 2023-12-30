@@ -6,6 +6,7 @@ import devicesData from "@/utils/devices.json";
 import { useVoiceControl } from "@/services/voice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMicrophone } from "@fortawesome/free-solid-svg-icons";
+import Swal from "sweetalert2";
 
 export default function Devices() {
   const [devices, setDevices] = useState(devicesData);
@@ -26,6 +27,11 @@ export default function Devices() {
   const handleControlDevice = async (deviceId, message) => {
     try {
       console.log(`Mengirim pesan ke perangkat ${deviceId}: ${message}`);
+      Swal.fire({
+        icon: "success",
+        title: "Success!",
+        text: `Kontrol perangkat ${deviceId}`,
+      });
 
       const device = devices.find((d) => d.id === deviceId);
       const mqttTopic = device ? device.mqtt_topic : "";
@@ -36,6 +42,11 @@ export default function Devices() {
             console.error(
               `Gagal mengirim pesan MQTT ke ${mqttTopic}: ${message}`
             );
+            Swal.fire({
+              icon: "error",
+              title: "Error!",
+              text: `Gagal mengirim pesan MQTT ke ${mqttTopic}: ${message}`,
+            });
           } else {
             console.log(
               `Pesan MQTT berhasil dikirim ke ${mqttTopic}: ${message}`
@@ -49,8 +60,8 @@ export default function Devices() {
   };
 
   return (
-    <main className="flex-1 p-4 bg-white border-2 border-gray-200 rounded-[40px] ml-4 mr-4 flex justify-center items-center flex-col">
-      <h1 className="text-center font-bold text-xl text-blue-800 mb-2">
+    <main className="flex-1 bg-white border-2 p-4 border-gray-200 rounded-[40px] ml-4 mr-4 flex justify-center items-center flex-col">
+      <h1 className="text-center font-bold text-xl text-blue-800">
         My Devices
       </h1>
       <div className="text-center m-4 bg-white border border-gray-200 rounded-3xl w-96 p-4">
@@ -61,7 +72,9 @@ export default function Devices() {
         >
           <FontAwesomeIcon icon={faMicrophone} />
         </button>
-        {listening ? "Mendengarkan Perintah..." : "Berikan Perintah!"}
+        {listening
+          ? "Mendengarkan Perintah..."
+          : "Tekan Untuk Berikan Perintah!"}
 
         {recognizedCommand && !listening && (
           <p>

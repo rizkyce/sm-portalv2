@@ -21,7 +21,7 @@ export default function Sidebar({ setActivePage }) {
           height={50}
         />
 
-        <p className="font-bold">Ridho Rizky</p>
+        <p className="font-bold">User 1</p>
 
         {/* {user && (
           <p className="font-semibold text-gray-800 text-xl">{user.username}</p>

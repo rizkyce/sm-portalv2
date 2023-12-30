@@ -16,7 +16,7 @@ const options = {
   clean: true,
   will: {
     topic: "home/status",
-    payload: "offline",
+    payload: "The portal is not in use!",
     qos: 0,
     retain: false,
   },
@@ -39,6 +39,11 @@ client.on("error", (error) => {
 
 client.on("message", (topic, message) => {
   console.log(`Received message on topic ${topic}: ${message.toString()}`);
+  // Swal.fire({
+  //   icon: "success",
+  //   title: "Success!",
+  //   text: `Received message on topic ${topic}: ${message.toString()}`,
+  // });
 });
 
 client.on("close", () => {

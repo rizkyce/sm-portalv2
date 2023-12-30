@@ -3,16 +3,15 @@ import Image from "next/image";
 
 const DeviceList = ({ devices, handleControlDevice }) => {
   return (
-    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 ml-6">
+    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
       {devices.map((device) => (
         <li
           key={device.id}
-          className="bg-white border-2 border-blue-200 rounded-3xl p-4 flex flex-col items-center"
+          className="bg-white border-2 border-blue-200 rounded-[36px] p-4 flex flex-col items-center"
         >
           <div className="flex items-center">
-            {/* Icon */}
             <Image
-              src={device.icon} // Path menuju ikon di direktori public/icon
+              src={device.icon}
               alt={`${device.name} icon`}
               width={1000}
               height={1000}
@@ -32,8 +31,7 @@ const DeviceList = ({ devices, handleControlDevice }) => {
             </div>
           </div>
 
-          {/* Device Controls */}
-          <div className="mt-2 items-center">
+          <div className="mt-3 items-center">
             {device.command.map((message) => (
               <button
                 key={message.name}

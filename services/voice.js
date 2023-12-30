@@ -71,10 +71,15 @@ export function useVoiceControl() {
         Swal.fire({
           icon: "success",
           title: "Success!",
-          text: `Successfully gave commands to the ${selectedDevice.name} device.`,
+          text: `Sukses Mengirimkan Perintah ke Perangkat ${selectedDevice.name}.`,
         });
       } else {
-        console.log("Perangkat tidak ditemukan berdasarkan perintah suara.");
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: "Perangkat tidak ditemukan berdasarkan perintah suara.",
+        });
+        // console.log("Perangkat tidak ditemukan berdasarkan perintah suara.");
       }
     }
   }
