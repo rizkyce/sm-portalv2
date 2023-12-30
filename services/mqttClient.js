@@ -3,7 +3,7 @@ import mqtt from "mqtt";
 const options = {
   protocol: "wss",
   hostname: "xace626b.ala.us-east-1.emqxsl.com",
-  clientId: "portal-v2_" + Math.random().toString(16).substr(2, 8),
+  clientId: "smportal-v2_" + Math.random().toString(16).substr(2, 8),
   port: 8084,
   path: "/mqtt",
   username: "rizky",

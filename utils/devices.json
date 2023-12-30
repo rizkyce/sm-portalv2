@@ -2,21 +2,22 @@
   {
     "id": 1,
     "name": "Smart Fan",
+    "icon": "/icon/fan.png",
     "type": "Kipas Angin",
     "mqtt_topic": "home/device/smartfan",
     "command": [
       {
-        "name": "Speed 1",
+        "name": "1",
         "message": "#SPEEDONE",
         "voice": "Hidupkan Kipas Angin Kecepatan 1"
       },
       {
-        "name": "Speed 2",
+        "name": "2",
         "message": "#SPEEDTWO",
         "voice": "Hidupkan Kipas Angin Kecepatan 2"
       },
       {
-        "name": "Swing ON",
+        "name": "Swing",
         "message": "#SWINGON",
         "voice": "Swing Kipas Angin"
       },
@@ -27,25 +28,146 @@
       },
       { "name": "OFF", "message": "#OFF", "voice": "Matikan Kipas Angin" }
     ],
-    "status": "status/smartfan"
+    "status": "online"
   },
   {
     "id": 2,
     "name": "Smart Lamp",
+    "icon": "/icon/lamp.png",
     "type": "Lampu Kamar",
     "mqtt_topic": "home/device/smartlamp",
     "command": [
       {
-        "name": "Hidup",
+        "name": "ON",
         "message": "#ON",
-        "voice": "Hidupkan Lampu Kamar"
+        "voice": "Hidupkan Lampu"
       },
       {
-        "name": "Mati",
+        "name": "OFF",
         "message": "#OFF",
-        "voice": "Matikan Lampu Kamar"
+        "voice": "Matikan Lampu "
       }
     ],
-    "status": "status/smartlamp"
+    "status": "online"
+  },
+  {
+    "id": 3,
+    "name": "Smart LED RGB",
+    "icon": "/icon/rgb.png",
+    "type": "Lampu Kamar",
+    "mqtt_topic": "home/device/smartled",
+    "command": [
+      {
+        "name": "ON",
+        "message": "#ON",
+        "voice": "Hidupkan Lampu Tidur"
+      },
+      {
+        "name": "OFF",
+        "message": "#OFF",
+        "voice": "Matikan Lampu Tidur"
+      }
+    ],
+    "status": "online"
+  },
+  {
+    "id": 4,
+    "name": "Smart Humidifier ",
+    "icon": "/icon/humidifier.png",
+    "type": "Pelembab Udara",
+    "mqtt_topic": "home/device/smarthumidifer",
+    "command": [
+      {
+        "name": "ON",
+        "message": "#ON",
+        "voice": "Hidupkan Pelembab Udara"
+      },
+      {
+        "name": "OFF",
+        "message": "#OFF",
+        "voice": "Matikan Pelembab Udara"
+      }
+    ],
+    "status": "online"
+  },
+  {
+    "id": 5,
+    "name": "Smart Vacuum",
+    "icon": "/icon/robot-vacuum.png",
+    "type": "Pembersih Pintar",
+    "mqtt_topic": "home/device/vacuum",
+    "command": [
+      {
+        "name": "ON",
+        "message": "#ON",
+        "voice": "Hidupkan Pembersih Pintar"
+      },
+      {
+        "name": "OFF",
+        "message": "#OFF",
+        "voice": "Matikan Pembersih Pintar"
+      }
+    ],
+    "status": "online"
+  },
+  {
+    "id": 6,
+    "name": "Smart Moskiller",
+    "icon": "/icon/mosquito.png",
+    "type": "Anti Nyamuk",
+    "mqtt_topic": "home/device/moskiller",
+    "command": [
+      {
+        "name": "ON",
+        "message": "#ON",
+        "voice": "Hidupkan Anti Nyamuk"
+      },
+      {
+        "name": "OFF",
+        "message": "#OFF",
+        "voice": "Matikan Anti Nyamuk"
+      }
+    ],
+    "status": "online"
+  },
+  {
+    "id": 7,
+    "name": "Smart Plug",
+    "icon": "/icon/smart-plug.png",
+    "type": "Colokan Listrik",
+    "mqtt_topic": "home/device/smartplug",
+    "command": [
+      {
+        "name": "ON",
+        "message": "#ON",
+        "voice": "Hidupkan Stop Kontak"
+      },
+      {
+        "name": "OFF",
+        "message": "#OFF",
+        "voice": "Matikan Stop Kontak"
+      }
+    ],
+    "status": "online"
+  },
+  {
+    "id": 8,
+    "name": "Smart IR Remote",
+    "icon": "/icon/ir-remote.png",
+    "type": "Remote Listrik",
+    "mqtt_topic": "home/device/irremote",
+    "command": [
+      {
+        "name": "ON",
+        "message": "#ON",
+        "voice": "Hidupkan AC"
+      },
+      {
+        "name": "OFF",
+        "message": "#OFF",
+        "voice": "Matikan AC"
+      }
+    ],
+    "status": "online"
   }
 ]

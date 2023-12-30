@@ -1,0 +1,12 @@
+{
+  "templates": [
+    { "label": "Smart Fan", "value": "template1" },
+    { "label": "Smart Lamp", "value": "template2" },
+    { "label": "Smart Mosquitto Killer", "value": "template3" },
+    { "label": "Smart Vacuum Cleaner", "value": "template4" },
+    { "label": "Smart LED RGB", "value": "template5" },
+    { "label": "Smart Plug", "value": "template6" },
+    { "label": "Smart IR Blaster", "value": "template7" },
+    { "label": "Smart Humidifier", "value": "template8" }
+  ]
+}

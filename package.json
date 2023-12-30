@@ -9,12 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "mqtt": "^5.3.4",
     "next": "14.0.4",
+    "preline": "^2.0.2",
     "react": "^18",
     "react-dom": "^18",
     "react-speech-recognition": "^3.10.0",
-    "regenerator-runtime": "^0.14.1"
+    "regenerator-runtime": "^0.14.1",
+    "sweetalert2": "^11.10.2",
+    "sweetalert2-react-content": "^5.0.7"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
