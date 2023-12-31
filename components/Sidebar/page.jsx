@@ -64,15 +64,15 @@ export default function Sidebar({ setActivePage }) {
           </svg>
           Guide
         </a>
-        <hr className="my-2  border-gray-400"></hr>
+        <hr className="my-2 mb-6 border-gray-400"></hr>
 
         {/* <LogoutLink className="w-100 h-100 bg-white border border-red-800 hover:bg-red-800 hover:text-white text-red-800 rounded-full p-3 text-sm m-10">
           Logout
         </LogoutLink> */}
 
-        <button className="bg-white border border-red-800 hover:bg-red-800 hover:text-white text-red-800 rounded-full p-3 text-sm mb-2 mt-4 w-full">
-          <LogoutLink>Log out</LogoutLink>
-        </button>
+        <LogoutLink className="ml-12 font-bold text-red-500 hover:text-red-700">
+          Logout
+        </LogoutLink>
       </div>
     </div>
   );

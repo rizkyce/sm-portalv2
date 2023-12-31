@@ -23,10 +23,9 @@ export default function Home() {
       <p className="font-semibold italic text-gray-400 mb-4 mt-4 ">
         Silahkan Login Untuk Masuk Kedalam Portal
       </p>
-
-      <button className="bg-white border border-black text-black rounded-full p-3 text-sm mb-7 w-32 font-bold hover:bg-black hover:text-white">
-        <LoginLink>Sign in</LoginLink>
-      </button>
+      <LoginLink className="bg-white border border-black text-black rounded-full p-3 text-sm mb-7 w-32 font-bold hover:bg-black hover:text-white">
+        Sign in
+      </LoginLink>
       <p className="font-semibold text-gray-500 mb-8 ">
         Belum Punya Akun?{" "}
         <RegisterLink className="text-blue-700">Register</RegisterLink>
