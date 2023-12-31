@@ -45,7 +45,7 @@
       {
         "name": "OFF",
         "message": "#OFF",
-        "voice": "Matikan Lampu "
+        "voice": "Matikan Lampu"
       }
     ],
     "status": "online"
