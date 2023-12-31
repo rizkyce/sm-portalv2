@@ -2,14 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
-// import { useAuth } from "@/hooks/useAuth";
+import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
 export default function Sidebar({ setActivePage }) {
-  //   const { user, logout } = useAuth();
+  const { user } = useKindeBrowserClient();
 
-  const handleLogout = async () => {
-    await logout();
-  };
   return (
     <div className="bg-white border-2 border-gray-200 rounded-[40px] text-black h-full w-56 p-8 ml-4">
       <div className="flex flex-col items-center mb-10">
@@ -20,9 +18,11 @@ export default function Sidebar({ setActivePage }) {
           width={50}
           height={50}
         />
-
-        <p className="font-bold">User 1</p>
-
+        {user && (
+          <p className="font-bold">
+            {user.given_name} {user.family_name}
+          </p>
+        )}
         {/* {user && (
           <p className="font-semibold text-gray-800 text-xl">{user.username}</p>
         )}
@@ -64,13 +64,14 @@ export default function Sidebar({ setActivePage }) {
           </svg>
           Guide
         </a>
-        <hr className="my-2 border-gray-400"></hr>
+        <hr className="my-2  border-gray-400"></hr>
 
-        <button
-          onClick={handleLogout}
-          className="bg-white border border-red-800 hover:bg-red-800 hover:text-white text-red-800 rounded-full p-3 text-sm mb-2 mt-4 w-full"
-        >
+        {/* <LogoutLink className="w-100 h-100 bg-white border border-red-800 hover:bg-red-800 hover:text-white text-red-800 rounded-full p-3 text-sm m-10">
           Logout
+        </LogoutLink> */}
+
+        <button className="bg-white border border-red-800 hover:bg-red-800 hover:text-white text-red-800 rounded-full p-3 text-sm mb-2 mt-4 w-full">
+          <LogoutLink>Log out</LogoutLink>
         </button>
       </div>
     </div>

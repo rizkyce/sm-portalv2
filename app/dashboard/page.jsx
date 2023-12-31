@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import VoiceControl from "@/components/Recognition/VoiceControl";
 import Sidebar from "@/components/Sidebar/page";
 import Devices from "@/components/Devices/page";
 import Form from "@/components/AddDevice/page";
